@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export  function SearchCity({setCity, newCity}) {
+    const [search, setSearch] = useState()
 
     const handleChangeCity= (e) =>{
-        setCity(e.target.value)
+        setSearch(e.target.value)
     }
-
+    
     const handleSubmit= (e) =>{
         e.preventDefault()
-        console.log(newCity);
-        return newCity
+
+        setCity(search)
 
     }
 
