@@ -31,11 +31,11 @@ function App() {
                 const respJs = await response.json();
                 console.log(respJs);
                 setData(respJs);
-                setName(respJs.name);
-                setCountry(respJs.sys.country);
-                setTemps(respJs.weather[0].main);
-                setHumidity(respJs.main.humidity);
-                setTemperature(respJs.main.temp);
+                setName("name :" + respJs.name);
+                setCountry("Country :"+ respJs.sys.country);
+                setTemps("Temps :" + respJs.weather[0].main);
+                setHumidity("Humidity :"+ respJs.main.humidity);
+                setTemperature("Temperature :" + respJs.main.temp + " c°");
 
             }
             fetchApi();
