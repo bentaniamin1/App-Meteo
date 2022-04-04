@@ -18,7 +18,7 @@ function App() {
             const fetchApi = async() =>
             {
                 
-                const url =`http://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=378ed66b1dd61d1e7ede98209e3e3473`;
+                const url =`http://api.openweathermap.org/data/2.5/weather?q=${newCity}&units=metric&appid=984402b43af0b9ab91207b62f676bef0`;
                 const response = await fetch(url);
                 const respJs = await response.json();
                 console.log(respJs);
@@ -37,7 +37,7 @@ function App() {
         <SearchCity setCity={setCity} newCity={newCity}/>
         {data && 
                 
-                <p> Ville: {data.name}</p>
+            <p> Ville: {data.name} pays : {data.sys.country} temps: {data.weather[0].main}</p>
             
         }
 
