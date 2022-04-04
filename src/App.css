@@ -1,0 +1,9 @@
+.App {
+    display: block;
+    transform: translate(50% , 50%);
+}
+
+.titre{
+    text-align: center;
+    transform: translate(50% , 50%);
+}

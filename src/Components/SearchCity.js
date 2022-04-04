@@ -18,10 +18,10 @@ export  function SearchCity({setCity, newCity}) {
     return (
     <form onSubmit={handleSubmit}>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Rechercher une Ville</label>
+            <label for="exampleInputEmail1" class="form-label">Rechercher une Ville :</label>
             <input type="text" class="form-control" id="InputText" aria-describedby="texthelp" onChange={handleChangeCity}></input>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="submit btn btn-primary">Rechercher</button>
     </form>
   )
 }
