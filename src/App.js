@@ -13,6 +13,7 @@ function App() {
     const[name, setName] = useState()
     const[country, setCountry] = useState()
     const[humidity, setHumidity] = useState()
+    const[temperature, setTemperature] = useState()
     const[temps, setTemps] = useState()
     const[Error, setError] = useState(true)
     const[messageError, setMessageError] = useState(true)
@@ -34,6 +35,7 @@ function App() {
                 setCountry(respJs.sys.country);
                 setTemps(respJs.weather[0].main);
                 setHumidity(respJs.main.humidity);
+                setTemperature(respJs.main.temp);
 
             }
             fetchApi();
@@ -58,7 +60,7 @@ function App() {
     <div className='row'>
         <div className="App col-sm-6" >
             <SearchCity setCity={setCity} newCity={newCity}/>
-            <InfoData name={name} country={country} humidity={humidity} temps={temps}/>
+            <InfoData name={name} country={country} humidity={humidity} temps={temps} temperature={temperature}/>
 
 
         </div>
